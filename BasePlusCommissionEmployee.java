@@ -1,7 +1,8 @@
 // Fig. 9.11: BasePlusCommissionEmployee.java
 // BasePlusCommissionEmployee class inherits from CommissionEmployee 
-// and accesses the superclass’s private data via inherited 
+// and accesses the superclassï¿½s private data via inherited 
 // public methods.
+// Aaron Roach - CSIS_312-D01
 
 public class BasePlusCommissionEmployee extends CommissionEmployee
 {
