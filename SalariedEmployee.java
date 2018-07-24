@@ -1,5 +1,6 @@
 // Fig. 10.5: SalariedEmployee.java
 // SalariedEmployee concrete class extends abstract class Employee.
+// Aaron Roach - CSIS_312-D02
 
 public class SalariedEmployee extends Employee 
 {

@@ -1,5 +1,6 @@
 // Fig. 10.8: BasePlusCommissionEmployee.java
 // BasePlusCommissionEmployee class extends CommissionEmployee.
+// Aaron Roach - CSIS_312-D02
 
 public class BasePlusCommissionEmployee extends CommissionEmployee 
 {

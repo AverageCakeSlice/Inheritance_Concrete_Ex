@@ -1,5 +1,5 @@
 //PieceWorker -- Provides concrete implementation for workers paid by product produced, and extends abstract class Employee
-//CSIS 312-B03
+// Aaron Roach - CSIS_312-D02
 
 public class PieceWorker extends Employee {
     
@@ -7,6 +7,9 @@ public class PieceWorker extends Employee {
     private double wage;
     private int pieces;
     
+    
+    //--Constructors--
+
     //Default constructor
     public PieceWorker(String firstName, String lastName, String socialSecurityNumber, double wage, int pieces){
         super(firstName, lastName, socialSecurityNumber);
@@ -21,9 +24,11 @@ public class PieceWorker extends Employee {
         
         this.wage = wage;
         this.pieces = pieces;
-    }//end of constructor
+    }
     
-    //Setters
+    
+    //--Setters--
+
     public void setWage(double wage){
         if (wage < 0.0) // validate wage
          throw new IllegalArgumentException(
@@ -32,6 +37,7 @@ public class PieceWorker extends Employee {
         this.wage = wage;
     }
     
+
     public void setPieces(int pieces){
         if (pieces < 0)//validate number of pieces
           throw new IllegalArgumentException(
@@ -40,21 +46,28 @@ public class PieceWorker extends Employee {
         this.pieces = pieces;
     }
     
-    //Getters
+
+    //--Getters--
+
     public double getWage(){
         return wage;
     }
     
+
     public int getPieces(){
         return pieces;
     }
     
+
+    //--Overridden methods--
+
     //calculate earnings, overrides earnings method in abstract class Employee
     @Override
     public double earnings(){
         return wage * (double)pieces;
     }
     
+
     //specific implementation of toString, overrides method in abstract class Employee
     @Override
     public String toString(){
@@ -62,4 +75,5 @@ public class PieceWorker extends Employee {
                 super.toString(),"Wage per piece", getWage(),"Pieces produced", getPieces());
     }
     
+
 }//end of concrete subclass PieceWorker

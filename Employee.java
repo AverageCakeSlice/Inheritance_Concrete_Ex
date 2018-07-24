@@ -1,5 +1,6 @@
 // Fig. 10.4: Employee.java
 // Employee abstract superclass.
+// Aaron Roach - CSIS_312-D02
 
 public abstract class Employee 
 {

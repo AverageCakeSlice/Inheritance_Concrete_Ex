@@ -1,5 +1,6 @@
 // Fig. 10.6: HourlyEmployee.java
 // HourlyEmployee class extends Employee.
+// Aaron Roach - CSIS_312-D02
 
 public class HourlyEmployee extends Employee 
 {
