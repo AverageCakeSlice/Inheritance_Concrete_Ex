@@ -1,48 +1,63 @@
-//Employee superclass provides a base-level class for a generic employee
-//Specific implementations are handled by child classes like 
-//CommissionEmployee and BasePlusCommissionEmployee.
-// Aaron Roach - CSIS_312-D02
+// Fig. 10.4: Employee.java
+// Employee abstract superclass.
 
-public class Employee
+public abstract class Employee 
 {
-    //instance variables available to all subclasses via get methods
-    private final String firstName;
-    private final String lastName;
-    private final String socialSecurityNumber;
+   private final String firstName;
+   private final String lastName;
+   private final String socialSecurityNumber;
 
-    //three-argument constructor
-    public Employee(String firstName, String lastName,
-    String socialSecurityNumber)
-    {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.socialSecurityNumber = socialSecurityNumber;
-    }
+   // constructor
+   public Employee(String firstName, String lastName, 
+      String socialSecurityNumber)
+   {
+      this.firstName = firstName;                                    
+      this.lastName = lastName;                                    
+      this.socialSecurityNumber = socialSecurityNumber;         
+   } 
 
-    //get methods
-    public String getFirstName()
-    {
-        return firstName;
-    }
+   // return first name
+   public String getFirstName()
+   {
+      return firstName;
+   } 
 
-    public String getLastName()
-    {
-        return lastName;
-    }
+   // return last name
+   public String getLastName()
+   {
+      return lastName;
+   } 
 
-    public String getSocialSecurityNumber()
-    {
-        return socialSecurityNumber;
-    }
+   // return social security number
+   public String getSocialSecurityNumber()
+   {
+      return socialSecurityNumber;
+   } 
+
+   // return String representation of Employee object
+   @Override
+   public String toString()
+   {
+      return String.format("%s %s%nSocial Security number: %s", 
+         getFirstName(), getLastName(), getSocialSecurityNumber());
+   } 
+
+   // abstract method must be overridden by concrete subclasses
+   public abstract double earnings(); // no implementation here
+} // end abstract class Employee
 
 
-    //toString superclass Object method override
-    @Override
-    public String toString()
-    {
-        return String.format("%s: %s %s%n%s: %s%n",  
-        "commission employee", getFirstName(), getLastName(), 
-        "social security number", getSocialSecurityNumber());
-    }
-
-}//end of class Employee
+/**************************************************************************
+ * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
+ * Pearson Education, Inc. All Rights Reserved.                           *
+ *                                                                        *
+ * DISCLAIMER: The authors and publisher of this book have used their     *
+ * best efforts in preparing the book. These efforts include the          *
+ * development, research, and testing of the theories and programs        *
+ * to determine their effectiveness. The authors and publisher make       *
+ * no warranty of any kind, expressed or implied, with regard to these    *
+ * programs or to the documentation contained in these books. The authors *
+ * and publisher shall not be liable in any event for incidental or       *
+ * consequential damages in connection with, or arising out of, the       *
+ * furnishing, performance, or use of these programs.                     *
+ *************************************************************************/
